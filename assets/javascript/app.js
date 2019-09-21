@@ -1,5 +1,4 @@
-var card = $("#quizSpace");
-
+// Array of questions
 var questions = [{
     question: "What device helps trainers identify Pokemon?",
     answers: ["Polyjuice Potion", "Hyper Potion", "Bulbasaur", "Pokedex"],
@@ -41,9 +40,11 @@ var questions = [{
     answers: ["She wanted his Pikachu", "She was in love with him", "She thought he was a skilled trainer", "He stole and wrecked her bike"],
     correctAnswer: "He stole and wrecked her bike"
 }];
-
+// global vars
 var timer;
+var card = $("#quizSpace");
 
+// object w/functions
 var trivGame = {
     correct: 0,
     incorrect: 0,
@@ -53,7 +54,7 @@ var trivGame = {
         game.counter--;
         $("#counter-number").html(trivGame.counter);
         if (trivGame.counter === 0) {
-            console.log("TIME UP");
+            console.log("TIME'S UP");
             game.done();
         }
     },
@@ -63,9 +64,9 @@ var trivGame = {
 
         $("#sub-wrapper").prepend(
             "<h2>Time Remaining: <span id='counter-number'>60</span> Seconds</h2>");
-
+        // Removes start button
         $("#start").remove();
-
+        // Loops through each question and posts the question, with the answer choices next to it
         for (let i = 0; i < questions.length; i++) {
             card.append("<h2>" + questions[i]).question + "</h2>";
             for (var j = 0; j, questions[i].answers.length; j++) {
@@ -78,6 +79,7 @@ var trivGame = {
 
     done: function() {
         var inputs = card.children("input:checked");
+        // checking for correct answer
         for (var i = 0; i < inputs.length; i++) {
           if ($(inputs[i]).val() === questions[i].correctAnswer) {
             trivGame.correct++;
@@ -101,6 +103,6 @@ var trivGame = {
 };
 
 $("#start").on("click", function () {
-
+    game.start();
 
 });
