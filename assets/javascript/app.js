@@ -88,8 +88,9 @@ $(document).ready(function() {
         done: function () {
             // making question div accessible to done func
             var questDiv = $(".question");
-            console.log("done in")
+            // Not for Maria: I've changed the line below several times. I feel like this is part of the problem and possibly where I'm creating the inputs on line 81
             var inputs = card.children("input:checked");
+            console.log(inputs)
             // checking for correct answer
             // LOOP THROUGH EACH QUESTION DIV AND GRAB SELECTED INPUT FOR THAT QUESTION
             for (var i = 0; i < inputs.length; i++) {
