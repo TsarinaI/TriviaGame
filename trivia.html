@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
-
-<head>
-
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>PokemonTrivia</title>
-    
+
     <!-- CSS Reset Sheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
 
     <!-- Our own CSS Sheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-</head>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <div id="wrapper">
-        <h1 id="header">Pokemon Trivia!</h1>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2"></div>
 
-        <div id="subwrapper">
-            <div class="quizSpace">
+        <div class="card col-8">
+          <div id="wrapper">
+            <h1 id="header">Pokemon Trivia!</h1>
+
+            <div id="subwrapper">
+              <div class="quizSpace">
                 <button id="start">Start Quiz</button>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col-2"></div>
+      </div>
     </div>
 
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-</body>
-
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+  </body>
 </html>
