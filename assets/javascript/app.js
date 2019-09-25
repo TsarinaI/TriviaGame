@@ -78,7 +78,7 @@ $(document).ready(function() {
                 questDiv.append("<h2>" + questions[i].question + "</h2>");
 
                 for (var j = 0; j < questions[i].answers.length; j++) {
-                    questDiv.append("<input type='radio' name= 'question-'" + i + "' value='" + questions[i].answers[j] + "'>'" + questions[i].answers[j])
+                    questDiv.append("<input type='radio' name= 'question-" + i + "' value='" + questions[i].answers[j] + "'>" + questions[i].answers[j])
                 };
             }
 
@@ -89,7 +89,7 @@ $(document).ready(function() {
             // making question div accessible to done func
             var questDiv = $(".question");
             // Not for Maria: I've changed the line below several times. I feel like this is part of the problem and possibly where I'm creating the inputs on line 81
-            var inputs = card.children("input:checked");
+            var inputs = card.children().children("input:checked");
             console.log(inputs)
             // checking for correct answer
             // LOOP THROUGH EACH QUESTION DIV AND GRAB SELECTED INPUT FOR THAT QUESTION
